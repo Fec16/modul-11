@@ -21,7 +21,9 @@
 # Reflection on Rolling Update & Kubernetes Manifest File
 
 1. What is the difference between Rolling Update and Recreate deployment strategy?
+- *Rolling Update is the default deployment strategy utilized by Kubernetes. When updating a deployment, this strategy gradually replaces old pods with newer versions, ensuring no downtime. Additionally, if any issues arise during the update process, Kubernetes automatically rolls back to a more stable previous version.*
 
+- *Recreate is a strategy where all existing pods must be terminated before newer versions are created. Consequently, there will be downtime during the update process. Typically, this strategy is employed when an application cannot run both old and new pod versions simultaneously.*
 
 2. Try deploying the Spring Petclinic REST using Recreate deployment strategy and document your attempt.
 
